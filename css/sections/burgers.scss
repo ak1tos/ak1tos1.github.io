@@ -1,0 +1,227 @@
+.burgers {
+background: #f9b43b; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9b43b 0%, #eb8d38 33%, #eb8d38 66%, #f9b43b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f9b43b 0%,#eb8d38 33%,#eb8d38 66%,#f9b43b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f9b43b 0%,#eb8d38 33%,#eb8d38 66%,#f9b43b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); /* IE6-9 */
+}
+
+.burger__container {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.burger-slider-wrap {
+	position: relative;
+}
+
+.burger-slider__btn_next, .burger-slider__btn_prev {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.burger-slider__btn_next {
+	right: -20px;
+
+	& svg {
+		//transform: rotate(-90deg);
+	}
+}
+
+.burger-slider__btn_prev {
+	left: -20px;
+}
+
+.down__arrow-icon_next {
+	transform: rotate(-90deg);
+}
+
+.down__arrow-icon_prev {
+	transform: rotate(90deg);
+}
+
+.ingredients {
+	display: block;
+	position: absolute;
+	top: 20px;
+	background: rgba(227, 80, 40, 0.4);
+	width: 90px;
+	height: 90px;
+	border-radius: 5px;
+
+	&:hover {
+		background: $red;
+
+		.ingredients__dropdown {
+			left: 100%;
+			opacity: 1;
+		}
+	}
+}
+
+.ingredients__dropdown {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    width: 270px;
+    border-radius: 7px;
+    left: -9999px;
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    z-index: 10;
+}
+
+.ingredients__dropdown::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    left: -29px;
+}
+
+.ingredients__table {
+	width: 100%;
+}
+
+.ingredients__table-cell {
+    vertical-align: middle;
+    padding: 5px 0;
+}
+
+.ingredients__table-text {
+	font-family: 'ubuntu';
+    font-weight: 400;
+    font-size: 14px;	
+}
+
+.ingredients__icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.ingredients__icon-text {
+	font-family: 'gagalinregular';
+	font-weight: 400;
+	color: #fff;
+	font-size: 14px;
+}
+
+.burgers__slider-item {
+	position: relative;
+	padding-bottom: 85px;
+}
+
+.burgers__slider-item:before, .burgers__slider-item:after {
+    content: "";
+    display: table;
+}
+
+.burgers__slider-item:after {
+	clear: both;
+}
+
+.burger-weight {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: .5;
+}
+
+.burger-weight__measure {
+	background: url('../img/icons/kkal.svg') 50% no-repeat;
+	width: 65px;
+	height: 60px;
+	position: relative;
+}
+
+.burger-weight__amount {
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-family: 'gagalinregular';
+}
+
+.burger-weight__text {
+	text-align: center;
+	font-family: 'gagalinregular';
+	color: #fff;
+	font-size: 14px;
+}
+
+.burger__slider-left {
+	float: left;
+	width: 50%;
+	padding-top: 95px;
+}
+
+.burger__slider-right {
+	float: left;
+	width: 50%;
+}
+
+.burger__slider-pic {
+	display: inline-block;
+	width: 100%;
+}
+
+.burger__slider-right .section__title {
+	line-height: 1.1em;
+}
+
+.burgers .section__title {
+	margin-bottom: 15px;
+}
+
+.section__title-white {
+	color: #fff;
+}
+
+.burger-slider__text {
+	font-family: 'ubuntu';
+	font-weight: 300;
+	font-size: 14px;
+	color: #fff;
+	margin-bottom: 15px;
+	line-height: 1.8;
+}
+
+.burger-slider__price {
+	font-family: 'gagalinregular';
+	font-weight: 400;
+	display: inline-block;
+	color: $orange;
+	vertical-align: middle;
+}
+
+.burger-slider__price_amount, .burger-slider__price_measure {
+	display: inline-block;
+	vertical-align: bottom;
+	line-height: 1;
+}
+
+.burger-slider__price_amount {
+	font-size: 72px;
+}
+
+.burger-slider__price_measure {
+	font-size: 30px;
+}
+
+.burger-slider__buy {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-left: 30px;
+	position: static;
+}

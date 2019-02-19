@@ -1,0 +1,172 @@
+.order {
+	background: url("../img/background/back_5.jpg") center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.order .container {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.order .section__title {
+	text-align: center;
+}
+
+.order__form {
+	margin-left: -5%;
+	@extend %clearfix;
+}
+
+.order__form-col {
+	float: left;
+	width: 45%;
+	margin-left: 5%;
+}
+
+.order__form-row {
+	margin-bottom: 16px;
+	@extend %clearfix;
+}
+
+.order__form-row_double, .order__form-row_quatro {
+	margin-left: -20px;
+}
+
+.order__form-row_double .order__form-block {
+	float: left;
+	width: calc(100%/2 - 20px);
+	margin-left: 20px;
+}
+
+.order__form-row_quatro .order__form-block {
+	float: left;
+	width: calc(100%/4 - 20px);
+	margin-left: 20px;
+}
+
+.order__form-label {
+	font-family: 'ubuntu';
+	font-weight: 300;
+	font-size: 14px;
+	color: #fff;
+	margin-bottom: 17px;
+}
+
+.order__form-input {
+	width: 100%;
+	padding: 5px 10px;
+	font-size: 14px;
+	border-radius: 5px;
+	border: 1px solid #d1cfcb;
+}
+
+.order__form-input_textarea {
+	height: 110px;
+}
+
+.order__radio {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	padding-right: 20px;
+	vertical-align: middle;
+	cursor: pointer;
+	width: 40%;
+}
+
+.order__radio-elem {
+	position: absolute;
+	top: 0;
+	left: -9999px;
+}
+
+.order__radio-fake {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    &:after {
+    	content: "";
+		display: block;
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		border-radius: 50%;
+		background: #e35028;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		-webkit-transition: width .3s, height .3s;
+		transition: width .3s, height .3s;
+    }
+}
+
+.order__radio-elem:checked + .order__radio-fake::after {
+	width: 8px;
+	height: 8px;
+}
+
+.order__radio-title {
+	font-family: 'ubuntu';
+	font-weight: 300;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	color: #fff;
+	margin-left: 30px;
+}	
+
+.order__radio-checkbox {
+	.order__radio-fake {
+		border-radius: 0px;
+	}
+
+	.order__radio-elem {
+		& + .order__radio-fake {
+			&:after {
+				background: transparent;
+			}
+		}
+	}
+
+	.order__radio-elem:checked {
+		& + .order__radio-fake {
+
+			&:after {
+				background: url("../img/icons/check.svg") 50% no-repeat transparent;
+				background-size: contain;
+				width: 11px;
+				height: 9px;
+			}
+		}
+	}
+}
+
+.order__form-button {
+	display: inline-block;
+	margin-right: 20px;
+	border: 0;
+	background: $red;
+	font-family: 'ubuntu';
+	font-weight: 300;
+	font-size: 13px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	color: #ffffff;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.order__form-button_reset {
+	padding-left: 0;
+	padding-right: 0;
+	text-transform: none;
+	background: transparent;
+}

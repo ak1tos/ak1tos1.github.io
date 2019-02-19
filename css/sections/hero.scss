@@ -1,0 +1,150 @@
+.hero {
+	background: url("../img/background/back_1.jpg") center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.header {
+	padding-top: 12px;
+}
+
+.header__logo, .header__nav {
+	float: left;
+}
+
+.header__logo {
+	width: 32%;
+}
+
+.header__nav {
+	width: 68%;
+	display: inline-block;
+	padding-top: 13px;
+}
+
+.nav {
+	width: 83%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.nav__item {
+	white-space: nowrap;
+	margin-right: 15px;
+	display: block;
+	float: left;
+
+	&:not(:nth-child(6))::after {
+		content: '';
+		display: inline-block;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: #fff;
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+}
+
+.nav__link {
+	vertical-align: middle;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	font-family: 'ubuntu';
+	font-weight: 500;
+	font-size: 13px;
+}
+
+.order__link {
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: rgb(228, 80, 40);
+  position: absolute;
+  width: 97px;
+  height: 35px;
+  text-transform: uppercase;
+  font-family: 'ubuntu';
+  font-weight: 500;
+  font-size: 13px;
+  color: #fff;
+  padding: 8px 15px;
+  //margin-left: 14px;
+  top: 22px;
+}
+
+.hero .container {
+	position: static;
+}
+
+.hero__container {
+	//position: absolute;
+	//top: 50%;
+	//transform: translateY(-50%);
+	//left: 0;
+	//right: 0;
+}
+
+.hero__left {
+	float: left;
+	width: 50%;
+}
+
+.hero__right {
+	float: left;
+	width: 50%;
+	padding-top: 115px;
+}
+
+.hero__img {
+	display: inline-block;
+	max-width: 100%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.section__title {
+	font-family: 'gagalinregular';
+	font-weight: 400;
+	font-size: 72px;
+	color: $yellow;
+	margin-bottom: 12px;
+}
+
+.hero__desc {
+	font-family: 'lifehackmedium';
+	font-weight: 500;
+	font-size: 65px;
+	color: #fff;
+	line-height: 1em;
+}
+
+.down__arrow {
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	width: 60px;
+	height: 14px;
+	margin-left: -15px;
+	transition: .3s;
+	height: 60px;
+
+		&:hover {
+		svg {
+			margin-top: -15px;
+			width: 35px;
+			height: 35px;
+		}
+	}
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 30px;
+		height: 30px;
+		transition: .3s;
+	}
+}

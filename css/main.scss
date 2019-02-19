@@ -1,0 +1,48 @@
+// colors
+$black: #2f3234;
+$yellow: #f9b43b;
+$orange:#e45028;
+$red: #e35028;
+
+// layouts
+@import 'layouts/normalize';
+@import 'layouts/settings';
+@import 'layouts/fonts';
+@import 'layouts/popups';
+@import 'layouts/fancybox';
+
+// sections
+@import 'sections/hero';
+@import 'sections/best';
+@import 'sections/burgers';
+@import 'sections/team';
+@import 'sections/menu';
+@import 'sections/reviews';
+@import 'sections/order';
+@import 'sections/map';
+@import 'sections/footer';
+
+
+// mixins
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+%clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}

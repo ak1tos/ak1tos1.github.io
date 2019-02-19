@@ -1,0 +1,95 @@
+.menu {
+	background: url("../img/background/back_4.jpg") center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.menu__title {
+	position: absolute;
+	color: #fff;
+	top: 10%;
+	left: 10%;
+}
+
+.menu-acco {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.menu-acco:before, .menu-acco:after {
+	content: "";
+	display: table;
+}
+
+.menu-acco:after {
+	clear: both;
+}
+
+.menu-acco__item {
+	float: left;
+	height: 100%;
+	@extend %clearfix;
+
+	&.menu-acco__item.active {
+		.menu-acco__trigger-text {
+			color: $yellow;
+		}
+
+		.menu-acco__content {
+			width: 550px;
+		}
+	}
+}
+
+.menu-acco__trigger {
+	display: block;
+	float: left;
+	width: 80px;
+	height: 100%;
+
+}
+
+.menu-acco__trigger {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+}
+
+.menu-acco__trigger-text {
+	font-family: 'gagalinregular';
+	font-weight: 400;
+	font-size: 40px;
+	color: #fff;
+	text-decoration: none;
+	position: absolute;
+	top: 50%;
+	height: 80px;
+	margin-top: -40px;
+	white-space: nowrap;
+	width: 650px;
+	left: 50%;
+	margin-left: -312px;
+	transform: rotate(-90deg);
+	text-align: center;
+}
+
+.menu-acco__content {
+	background: rgba(47, 50, 52, 0.93);
+	width: 0;
+	float: left;
+	height: 100%;
+	color: #fff;
+	overflow: hidden;
+}
+
+.menu-acco__text {
+	width: 550px;
+	padding: 60px 30px;
+	font-family: 'ubuntu';
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 1.8;
+}

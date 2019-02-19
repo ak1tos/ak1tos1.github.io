@@ -1,0 +1,122 @@
+.team {
+	background: url("../img/background/back_3.jpg") center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.team__section {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0px;
+	width: 50%;
+	background: rgba(#2f3234, .93%);
+	padding: 5% 2% 0 7%;
+}
+
+.team .section__title {
+	margin-bottom: 12px;
+}
+
+.team__acco-item {
+	margin-bottom: 40px;
+	&.active {
+		.team__acco-trigger {
+			color: $yellow;
+
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+}
+
+.team__acco-trigger {
+	font-family: 'gagalinregular';
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	display: block;
+	position: relative;
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: -18px;
+		top: 8px;
+		width: 0;
+		height: 0;
+	}
+
+	&:before {
+		border-top: 7px solid $yellow;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 0px solid transparent;
+		transform: rotate(0deg);
+		transition: .3s;
+	}
+
+	&:after {
+		display: none;
+		border-bottom: 7px solid $yellow;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 0px solid transparent;
+	}
+}
+
+.team__acco-content:before, .team__acco-content:after {
+    content: "";
+    display: table;
+}
+
+.team__acco-content:after {
+	clear: both;
+}
+
+.team__acco-content {
+	padding-top: 12px;
+	display: none;
+}
+
+.team__acco-pic {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+
+.team__acco-text {
+	float: left;
+	width: 70%;
+}
+
+.team__acco-img {
+	background-image: url(../img/teammate.jpg);
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+	border-radius: 50%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.team__acco-title {
+	font-family: 'ubuntu';
+	font-weight: 600;
+	font-size: 14px;
+	color: #fff;
+	margin-bottom: 14px;
+}
+
+.team__acco-desc {
+	font-family: 'ubuntu';
+	font-weight: 300;
+	font-size: 14px;
+	color: #fff;
+}
+
+
